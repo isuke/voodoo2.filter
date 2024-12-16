@@ -1,0 +1,14 @@
+{
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false
+  },
+
+  "cSpell.ignoreWords": [
+    "Kalandra",
+    "Gemcutter",
+    "Waystone"
+  ]
+}

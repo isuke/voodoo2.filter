@@ -1,0 +1,9 @@
+{
+  "scriptNames": ["T1", "T2", "T3"],
+  "propNames": ["Normal Equipment Activity", "Magic Equipment Activity"],
+  "values": [
+    ["Show", "Show"],
+    ["Hide", "Show"],
+    ["Hide", "Hide"]
+  ]
+}

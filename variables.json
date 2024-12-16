@@ -1,0 +1,133 @@
+[
+  { "name": "Currencies", "items": [] },
+  {
+    "name": "Sublime Currencies",
+    "items": ["Mirror of Kalandra", "Perfect Jeweller's Orb"]
+  },
+  {
+    "name": "Lofty Currencies",
+    "items": [
+      "Gemcutter's Prism",
+      "Greater Jeweller's Orb",
+      "Orb of Annulment",
+      "Orb of Chance"
+    ]
+  },
+  {
+    "name": "Precious Currencies",
+    "items": [
+      "Artificer's Orb",
+      "Chaos Orb",
+      "Exalted Orb",
+      "Glassblower's Bauble",
+      "Lesser Jeweller's Orb",
+      "Orb of Alchemy",
+      "Regal Orb",
+      "Vaal Orb"
+    ]
+  },
+  {
+    "name": "Trivial Currencies",
+    "items": [
+      "Blacksmith's Whetstone",
+      "Orb of Augmentation",
+      "Orb of Transmutation",
+
+      "Chance Shard",
+      "Regal Shard",
+      "Artificer's Shard"
+    ]
+  },
+  {
+    "name": "Cheap Currencies",
+    "items": [
+      "Scroll of Wisdom",
+      "Transmutation Shard"
+    ]
+  },
+  { "name": "Shards", "items": [] },
+  { "name": "Equipments", "items": ["#Weapons", "#Gears", "#Accessories"] },
+  { "name": "Weapons", "items": ["#One Hand Weapons", "#Two Hand Weapons"] },
+  {
+    "name": "One Hand Weapons",
+    "items": [
+      "Claw",
+      "Dagger",
+      "Flail",
+      "One Hand Axe",
+      "One Hand Mace",
+      "One Hand Sword",
+      "Spear",
+      "Sceptre",
+      "Wand"
+    ]
+  },
+  {
+    "name": "Two Hand Weapons",
+    "items": [
+      "Two Hand Axe",
+      "Two Hand Mace",
+      "Two Hand Sword",
+      "Quarterstaff",
+      "Bow",
+      "Crossbow",
+      "Staff",
+      "Trap"
+    ]
+  },
+  {
+    "name": "Gears",
+    "items": [
+      "Helmet",
+      "Body Armours",
+      "Glove",
+      "Boot",
+      "Shield",
+      "Focus",
+      "Quiver"
+    ]
+  },
+  { "name": "Jewelries", "items": ["Amulets", "Rings"] },
+  { "name": "Accessories", "items": ["#Jewelries", "Belts"] },
+  { "name": "Sublime Currencies", "items": [] },
+  { "name": "Lofty Currencies", "items": [] },
+  { "name": "Precious Currencies", "items": [] },
+  { "name": "Trivial Currencies", "items": [] },
+  { "name": "Cheap Currencies", "items": [] },
+  { "name": "Sublime Shards", "items": [] },
+  { "name": "Lofty Shards", "items": [] },
+  { "name": "Precious Shards", "items": [] },
+  { "name": "Trivial Shards", "items": [] },
+  { "name": "Cheap Shards", "items": [] },
+  { "name": "Unique Effect Color", "items": ["Brown"] },
+  { "name": "Utility Flask Effect Color", "items": ["Green"] },
+  { "name": "Life/Mana Flask Effect Color", "items": ["Purple"] },
+  { "name": "Sublime Effect Color", "items": ["Red"] },
+  { "name": "Lofty Effect Color", "items": ["Yellow"] },
+  { "name": "Precious Effect Color", "items": ["White"] },
+  { "name": "Trivial Effect Color", "items": ["Grey"] },
+  { "name": "Vaal Effect Color", "items": ["Brown"] },
+  { "name": "Currency Minimap Icon Shape", "items": ["Circle"] },
+  { "name": "Gem Minimap Icon Shape", "items": ["Triangle"] },
+  { "name": "Map Fragment Minimap Icon Shape", "items": ["Pentagon"] },
+  { "name": "Map Minimap Icon Shape", "items": ["Hexagon"] },
+  { "name": "Accessory Minimap Icon Shape", "items": ["Diamond"] },
+  { "name": "Equipment Minimap Icon Shape", "items": ["UpsideDownHouse"] },
+  { "name": "League Minimap Icon Shape", "items": ["Star"] },
+  { "name": "Flask Minimap Icon Shape", "items": ["Raindrop"] },
+  { "name": "Jewel Minimap Icon Shape", "items": ["Kite"] },
+  { "name": "Extra Large Font Size", "items": [45] },
+  { "name": "Large Font Size", "items": [40] },
+  { "name": "Default Font Size", "items": [32] },
+  { "name": "Small Font Size", "items": [28] },
+  { "name": "Extra Small Font Size", "items": [24] },
+  { "name": "Sublime Sound", "items": ["1 300"] },
+  { "name": "Lofty Sound", "items": ["6 300"] },
+  { "name": "Precious Sound", "items": ["3 300"] },
+  { "name": "Trivial Sound", "items": ["7 170"] },
+  { "name": "Cheap Sound", "items": ["9 140"] },
+  { "name": "Tier1 Sound", "items": ["10 300"] },
+  { "name": "Tier2 Sound", "items": ["14 170"] },
+  { "name": "Unique Sound", "items": ["2 300"] },
+  { "name": "Error Sound", "items": ["12 300"] }
+]

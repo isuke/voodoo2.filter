@@ -1,0 +1,287 @@
+################################################################################
+# Gold                                                                         #
+################################################################################
+Show "Gold"
+    BaseType == "Gold"
+    SetTextColor Var("Gold Color")
+    SetBackgroundColor 0 0 0 200
+
+    Fork "AreaLevel"
+        Show "High AreaLevel"
+            AreaLevel > 64
+
+            Fork "StackSize"
+                Show "High"
+                    StackSize >= 750
+                    SetFontSize Var("default Font Size")
+                Show "Low"
+                    StackSize < 750
+                    SetFontSize Var("Small Font Size")
+        Show "Low AreaLevel"
+            AreaLevel <= 64
+
+            Fork "StackSize"
+                Show "High"
+                    StackSize >= 100
+                    SetFontSize Var("default Font Size")
+                Show "Low"
+                    StackSize < 100
+                    SetFontSize Var("Small Font Size")
+
+################################################################################
+# Equipments                                                                   #
+################################################################################
+#
+# Jewelry(Amulet/Ring)
+#
+Show "Jewelry"
+    Class "Amulets" "Rings"
+    SetBorderColor Var("Jewelry Color")
+
+    Mixin "Quality"
+        Show "Has Quality"
+            Quality > 0
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
+#
+# Belt
+#
+Unset "Belts"
+    Class "Belts"
+    SetBorderColor Var("Jewelry Color")
+
+    Fork "Rarity"
+        Show "Rare"
+            Rarity Rare
+        Prop("Magic Equipment Activity") "Magic"
+            Rarity Magic
+        Prop("Normal Equipment Activity") "Normal"
+            Rarity Normal
+
+    Mixin "Quality"
+        Show "Has Quality"
+            Quality > 0
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
+#
+# Weapon/Gear
+#
+Unset "Weapon/Gear"
+    Class Var("Weapons") Var("Gears")
+
+    Fork "Rarity"
+        Show "Rare"
+            Rarity Rare
+        Prop("Magic Equipment Activity") "Magic"
+            Rarity Magic
+        Prop("Normal Equipment Activity") "Normal"
+            Rarity Normal
+
+    Mixin "Quality"
+        Show "Has Quality"
+            Quality > 0
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
+    Mixin "Sockets"
+        Show "Has Sockets"
+            Sockets > 0
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
+################################################################################
+# Gem                                                                          #
+################################################################################
+Show "Uncut Gem"
+    BaseType == "Uncut Skill Gem" "Uncut Support Gem" "Uncut Spirit Gem"
+    SetTextColor Var("Gem Color")
+    SetBorderColor Var("Gem Color")
+
+################################################################################
+# Rune                                                                         #
+################################################################################
+Show "Rune"
+    BaseType "Rune"
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Rune Color")
+    SetBorderColor Var("Rune Color")
+
+################################################################################
+# Charm                                                                        #
+################################################################################
+Show "Charm"
+    Class "Charm"
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Charm Color")
+    SetBorderColor Var("Charm Color")
+
+################################################################################
+# Tablet                                                                       #
+################################################################################
+Show "Tablet"
+    BaseType "Tablet"
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Tablet Color")
+    SetBackgroundColor Var("Tablet Color")
+
+################################################################################
+# Flask                                                                        #
+################################################################################
+Show "Unique Flask"
+    Class "Flask"
+    Rarity Unique
+    SetTextColor Var("Flask Color")
+    SetBorderColor Var("Unique Item Color")
+
+Show "Quality Flask"
+    Class "Flask"
+    Quality > 0
+    SetTextColor Var("Flask Color")
+    SetBackgroundColor Var("Tier2 BG Color") 200
+
+Unset "Flask"
+    Class "Flask"
+    SetTextColor Var("Flask Color")
+
+    Fork "AreaLevel"
+        Hide "High"
+            AreaLevel >= 70
+        Hide "Middle"
+            AreaLevel >= 60
+            DropLevel < 60
+        Show "Low"
+            AreaLevel < 60
+
+################################################################################
+# Jewel                                                                        #
+################################################################################
+Show "Unique Jewel"
+    Class "Jewel"
+    Rarity Unique
+    SetFontSize Var("Large Font Size")
+    SetTextColor Var("Jewel Color")
+    SetBackgroundColor 0 0 0
+    SetBorderColor Var("Unique Item Color")
+    MinimapIcon Medium Var("Unique Effect Color") Var("Jewel Minimap Icon Shape")
+    PlayEffect Var("Unique Effect Color")
+
+Show "Jewel"
+    Class "Jewel"
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Jewel Color")
+    SetBackgroundColor Var("Trivial BG Color") 240
+    SetBorderColor Var("Jewel Color")
+    # MinimapIcon NONE
+    PlayEffect Var("Trivial Effect Color") Temp
+
+################################################################################
+# Essence                                                                      #
+################################################################################
+Show "Essence"
+    BaseType "Essence"
+    SetTextColor Var("Essence Color")
+    SetBorderColor Var("Essence Color")
+
+################################################################################
+# Expedition                                                                   #
+################################################################################
+Show "Expedition Logbook"
+    Class "Expedition Logbook"
+    SetTextColor Var("Expedition Color")
+    SetFontSize Var("Large Font Size")
+    SetBackgroundColor Var("Precious BG Color")
+    SetBorderColor Var("Expedition Color")
+    MinimapIcon Medium Blue Var("League Minimap Icon Shape")
+    PlayEffect Blue
+    PlayAlertSoundPositional Var("Precious Sound")
+
+################################################################################
+# Waystone                                                                     #
+################################################################################
+Show "Waystone"
+    BaseType "Waystone"
+    SetTextColor Var("Waystone Color")
+    SetBorderColor Var("Waystone Color")
+
+    Fork "Tire"
+        Show "Red"
+            WaystoneTier >= 11
+            SetFontSize Var("Large Font Size")
+            SetBackgroundColor Var("Tier2 BG Color")
+            MinimapIcon Small Var("Sublime Effect Color") Var("Map Minimap Icon Shape")
+            PlayEffect Var("Sublime Effect Color")
+        Show "Yellow"
+            WaystoneTier >= 6
+            SetFontSize Var("Default Font Size")
+            SetBackgroundColor Var("Tier3 BG Color")
+            MinimapIcon Small Var("Lofty Effect Color") Var("Map Minimap Icon Shape")
+            PlayEffect Var("Lofty Effect Color") Temp
+        Show "White"
+            WaystoneTier < 6
+            SetFontSize Var("Default Font Size")
+            SetBackgroundColor Var("Cheap BG Color") 200
+            MinimapIcon Small Var("Precious Effect Color") Var("Map Minimap Icon Shape")
+
+################################################################################
+# Currency                                                                     #
+################################################################################
+Show "Currency"
+    Class "Currency"
+
+    Fork "Rareness"
+        Show "Sublime"
+            BaseType == Var("Sublime Currencies")
+            SetFontSize Var("Extra Large Font Size")
+            SetBackgroundColor Var("Sublime BG Color")
+            MinimapIcon Large Var("Sublime Effect Color") Var("Currency Minimap Icon Shape")
+            PlayEffect Var("Sublime Effect Color")
+            PlayAlertSoundPositional Var("Sublime Sound")
+
+        Show "Lofty"
+            BaseType == Var("Lofty Currencies")
+            SetFontSize Var("Large Font Size")
+            SetBackgroundColor Var("Lofty BG Color")
+            MinimapIcon Medium Var("Lofty Effect Color") Var("Currency Minimap Icon Shape")
+            PlayEffect Var("Lofty Effect Color")
+            PlayAlertSoundPositional Var("Lofty Sound")
+
+        Show "Precious"
+            BaseType == Var("Precious Currencies")
+            SetFontSize Var("Default Font Size")
+            SetBackgroundColor Var("Precious BG Color")
+            MinimapIcon Small Var("Precious Effect Color") Var("Currency Minimap Icon Shape")
+            PlayEffect Var("Precious Effect Color")
+            PlayAlertSoundPositional Var("Precious Sound")
+
+        Show "Trivial"
+            BaseType == Var("Trivial Currencies")
+            SetFontSize Var("Default Font Size")
+            SetBackgroundColor Var("Trivial BG Color") 240
+            MinimapIcon Small Var("Trivial Effect Color") Var("Currency Minimap Icon Shape")
+            PlayEffect Var("Trivial Effect Color") Temp
+
+        Show "Cheap"
+            BaseType == Var("Cheap Currencies")
+            SetFontSize Var("Default Font Size")
+            SetBackgroundColor Var("Cheap BG Color") 200
+
+################################################################################
+# Quest Items                                                                  #
+################################################################################
+Show "Quest"
+    Class "Quest Items"
+    SetFontSize Var("Extra Large Font Size")
+    SetTextColor Var("Quest Item Color")
+    SetBackgroundColor 0 0 0
+    SetBorderColor Var("Quest Item Color")
+    PlayEffect Green
+
+################################################################################
+# Error                                                                        #
+################################################################################
+Show "Error"
+#     SetFontSize Var("Extra Large Font Size")
+#     SetTextColor 255 255 255
+#     SetBackgroundColor 255 0 0
+#     MinimapIcon Large Red Star
+#     PlayEffect Red
+#     PlayAlertSound Var("Error Sound")
+#     CustomAlertSoundOptional "./Sounds/Error.wav" 300
