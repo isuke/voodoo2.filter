@@ -1,0 +1,48 @@
+[
+  { "name": "Normal Item Color"            , "hex": "#c8c8c8" },
+  { "name": "Magic Item Color"             , "hex": "#8888ff" },
+  { "name": "Rare Item Color"              , "hex": "#ffff77" },
+  { "name": "Unique Item Color"            , "hex": "#af6025" },
+
+  { "name": "Gem Color"                    , "hex": "#1ba29b" },
+  { "name": "Currency Color"               , "hex": "#8d8b4f" },
+  { "name": "Quest Item Color"             , "hex": "#4ae63a" },
+  { "name": "Flask Color"                  , "hex": "#9f3ccd" },
+  { "name": "Waystone Color"               , "hex": "#ffffff" },
+  { "name": "Jewel Color"                  , "hex": "#22d99e" },
+  { "name": "Jewelry Color"                , "hex": "#48d435" },
+  { "name": "Belt Color"                   , "hex": "#48d435" },
+  { "name": "Weapon Color"                 , "hex": "#00240e" },
+  { "name": "Gear Color"                   , "hex": "#001f14" },
+
+  { "name": "Gold Color"                   , "hex": "#a9aa4b" },
+
+  { "name": "Rune Color"                   , "hex": "#e99520" },
+  { "name": "Charm Color"                  , "hex": "#22d99e" },
+  { "name": "Tablet Color"                 , "hex": "#51f0ed" },
+  { "name": "Essence Color"                , "hex": "#5670d1" },
+  { "name": "Catalyst Color"               , "hex": "#36a62a" },
+  { "name": "Delirium Color"               , "hex": "#333f80" },
+  { "name": "Expedition Color"             , "hex": "#76b3fc" },
+
+  { "name": "Fire Color"                   , "hex": "#960000" },
+  { "name": "Cold Color"                   , "hex": "#366492" },
+  { "name": "Lightning Color"              , "hex": "#ffd700" },
+  { "name": "Chaos Color"                  , "hex": "#d02090" },
+  { "name": "Physical Color"               , "hex": "#1f191d" },
+
+  { "name": "Corrupted Color"              , "hex": "#d20000" },
+
+  { "name": "High Item Level Border Color" , "hex": "#52ca49" },
+
+  { "name": "Sublime BG Color"             , "hex": "#ffffff" },
+  { "name": "Lofty BG Color"               , "hex": "#a2a2a2" },
+  { "name": "Precious BG Color"            , "hex": "#444444" },
+  { "name": "Trivial BG Color"             , "hex": "#252525" },
+  { "name": "Cheap BG Color"               , "hex": "#000000" },
+
+  { "name": "Tier1 BG Color"               , "hex": "#e59495" },
+  { "name": "Tier2 BG Color"               , "hex": "#960000" },
+  { "name": "Tier3 BG Color"               , "hex": "#707000" },
+  { "name": "Tier4 BG Color"               , "hex": "#000046" }
+]
