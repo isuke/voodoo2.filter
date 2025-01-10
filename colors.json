@@ -25,6 +25,8 @@
   { "name": "Delirium Color"               , "hex": "#333f80" },
   { "name": "Expedition Color"             , "hex": "#76b3fc" },
 
+  { "name": "Sekhema Color"                , "hex": "#ffd700" },
+
   { "name": "Fire Color"                   , "hex": "#960000" },
   { "name": "Cold Color"                   , "hex": "#366492" },
   { "name": "Lightning Color"              , "hex": "#ffd700" },

@@ -13,7 +13,7 @@ Show "Gold"
             Fork "StackSize"
                 Show "High"
                     StackSize >= 750
-                    SetFontSize Var("default Font Size")
+                    SetFontSize Var("Large Font Size")
                 Show "Low"
                     StackSize < 750
                     SetFontSize Var("Small Font Size")
@@ -23,7 +23,7 @@ Show "Gold"
             Fork "StackSize"
                 Show "High"
                     StackSize >= 100
-                    SetFontSize Var("default Font Size")
+                    SetFontSize Var("Large Font Size")
                 Show "Low"
                     StackSize < 100
                     SetFontSize Var("Small Font Size")
@@ -95,6 +95,11 @@ Show "Uncut Gem"
     SetTextColor Var("Gem Color")
     SetBorderColor Var("Gem Color")
 
+    Mixin "BaseType"
+        Show "Uncut Spirit Gem"
+            BaseType == "Uncut Spirit Gem"
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
 ################################################################################
 # Rune                                                                         #
 ################################################################################
@@ -120,7 +125,7 @@ Show "Tablet"
     BaseType "Tablet"
     SetFontSize Var("Default Font Size")
     SetTextColor Var("Tablet Color")
-    SetBackgroundColor Var("Tablet Color")
+    SetBorderColor Var("Tablet Color")
 
 ################################################################################
 # Flask                                                                        #
@@ -219,6 +224,22 @@ Show "Waystone"
             SetFontSize Var("Default Font Size")
             SetBackgroundColor Var("Cheap BG Color") 200
             MinimapIcon Small Var("Precious Effect Color") Var("Map Minimap Icon Shape")
+
+################################################################################
+# Trial of the Sekhemas                                                        #
+################################################################################
+Show "Gold Key, Silver Key, Bronze Key"
+    BaseType "Gold Key" "Silver Key" "Bronze Key"
+    SetFontSize Var("Large Font Size")
+    SetTextColor Var("Sekhema Color")
+    SetBackgroundColor Var("Tier3 BG Color")
+    SetBorderColor Var("Sekhema Color")
+
+Show "Relic"
+    Class "Relic"
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Sekhema Color")
+    SetBorderColor Var("Sekhema Color")
 
 ################################################################################
 # Currency                                                                     #
