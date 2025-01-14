@@ -13,18 +13,36 @@ Show "Gold"
 #
 # Jewelry(Amulet/Ring)
 #
+Show "Unique Jewelry"
+    Class "Amulets" "Rings"
+    Rarity Unique
+    SetBorderColor Var("Jewelry Color")
+    SetTextColor Var("Unique Item Color")
+    PlayEffect Var("Unique Effect Color")
+
 Show "Jewelry"
     Class "Amulets" "Rings"
     SetBorderColor Var("Jewelry Color")
 
+    Mixin "ItemLevel"
+        Show "High ItemLevel"
+            ItemLevel >= 82
+            SetBackgroundColor Var("Tier2 BG Color") 200
     Mixin "Quality"
         Show "Has Quality"
             Quality > 0
-            SetBackgroundColor Var("Tier2 BG Color") 200
+            SetBackgroundColor Var("Tier3 BG Color") 200
 
 #
 # Belt
 #
+Show "Unique Belt"
+    Class "Belt"
+    Rarity Unique
+    SetBorderColor Var("Jewelry Color")
+    SetTextColor Var("Unique Item Color")
+    PlayEffect Var("Unique Effect Color")
+
 Unset "Belts"
     Class "Belts"
     SetBorderColor Var("Jewelry Color")
@@ -36,11 +54,14 @@ Unset "Belts"
             Rarity Magic
         Prop("Normal Equipment Activity") "Normal"
             Rarity Normal
-
+    Mixin "ItemLevel"
+        Show "High ItemLevel"
+            ItemLevel >= 82
+            SetBackgroundColor Var("Tier2 BG Color") 200
     Mixin "Quality"
         Show "Has Quality"
             Quality > 0
-            SetBackgroundColor Var("Tier2 BG Color") 200
+            SetBackgroundColor Var("Tier3 BG Color") 200
 
 #
 # Weapon/Gear
@@ -55,16 +76,18 @@ Unset "Weapon/Gear"
             Rarity Magic
         Prop("Normal Equipment Activity") "Normal"
             Rarity Normal
-
+    Mixin "ItemLevel"
+        Show "High ItemLevel"
+            ItemLevel >= 82
+            SetBackgroundColor Var("Tier2 BG Color") 200
     Mixin "Quality"
         Show "Has Quality"
             Quality > 0
-            SetBackgroundColor Var("Tier2 BG Color") 200
-
+            SetBackgroundColor Var("Tier3 BG Color") 200
     Mixin "Sockets"
         Show "Has Sockets"
             Sockets > 0
-            SetBackgroundColor Var("Tier2 BG Color") 200
+            SetBackgroundColor Var("Tier3 BG Color") 200
 
 ################################################################################
 # Gem                                                                          #
@@ -97,6 +120,11 @@ Show "Charm"
     SetTextColor Var("Charm Color")
     SetBorderColor Var("Charm Color")
 
+    Mixin "BaseType"
+        Show "Golden Charm"
+            Class "Golden Charm"
+            SetBackgroundColor Var("Tier2 BG Color") 200
+
 ################################################################################
 # Tablet                                                                       #
 ################################################################################
@@ -114,6 +142,7 @@ Show "Unique Flask"
     Rarity Unique
     SetTextColor Var("Flask Color")
     SetBorderColor Var("Unique Item Color")
+    PlayEffect Var("Unique Effect Color")
 
 Show "Quality Flask"
     Class "Flask"
@@ -239,6 +268,14 @@ Show "Gold Key, Silver Key, Bronze Key"
     SetTextColor Var("Sekhema Color")
     SetBackgroundColor Var("Tier3 BG Color")
     SetBorderColor Var("Sekhema Color")
+
+Show "Unique Relic"
+    Class "Relic"
+    Rarity Unique
+    SetFontSize Var("Default Font Size")
+    SetTextColor Var("Unique Item Color")
+    SetBorderColor Var("Sekhema Color")
+    PlayEffect Var("Unique Effect Color")
 
 Show "Relic"
     Class "Relic"
