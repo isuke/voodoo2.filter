@@ -119,7 +119,7 @@
   { "name": "Extra Large Font Size", "items": [45] },
   { "name": "Large Font Size", "items": [40] },
   { "name": "Default Font Size", "items": [32] },
-  { "name": "Small Font Size", "items": [28] },
+  { "name": "Small Font Size", "items": [26] },
   { "name": "Extra Small Font Size", "items": [24] },
   { "name": "Sublime Sound", "items": ["1 300"] },
   { "name": "Lofty Sound", "items": ["6 300"] },
