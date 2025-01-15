@@ -122,7 +122,7 @@ Show "Charm"
 
     Mixin "BaseType"
         Show "Golden Charm"
-            Class "Golden Charm"
+            BaseType "Golden Charm"
             SetBackgroundColor Var("Tier2 BG Color") 200
 
 ################################################################################
@@ -150,44 +150,43 @@ Show "Quality Flask"
     SetTextColor Var("Flask Color")
     SetBackgroundColor Var("Tier2 BG Color") 200
 
-Unset "Large Flask"
+Unset "Flask"
     Class "Flask"
-    DropLevel >= 60
     SetTextColor Var("Flask Color")
 
-    Fork "AreaLevel"
-        Hide "Very High"
-            AreaLevel >= 74
-        Show "High"
-            AreaLevel >= 64
-        Show "Middle"
-            AreaLevel >= 45
-        Show "Low"
-            AreaLevel < 45
-Unset "Middle Flask"
-    Class "Flask"
-    DropLevel >= 40
-    SetTextColor Var("Flask Color")
+    Fork "DropLevel"
+        Unset "High"
+            DropLevel >= 60
 
-    Fork "AreaLevel"
-        Hide "High"
-            AreaLevel >= 64
-        Show "Middle"
-            AreaLevel >= 45
-        Show "Low"
-            AreaLevel < 45
-Show "Small Flask"
-    Class "Flask"
-    DropLevel < 40
-    SetTextColor Var("Flask Color")
+            Fork "AreaLevel"
+                Hide "Very High"
+                    AreaLevel >= 74
+                Show "High"
+                    AreaLevel >= 64
+                Show "Middle"
+                    AreaLevel >= 45
+                Show "Low"
+                    AreaLevel < 45
+        Unset "Middle"
+            DropLevel < 60
 
-    Fork "AreaLevel"
-        Hide "High"
-            AreaLevel >= 64
-        Hide "Middle"
-            AreaLevel >= 45
-        Show "Low"
-            AreaLevel < 45
+            Fork "AreaLevel"
+                Hide "High"
+                    AreaLevel >= 64
+                Show "Middle"
+                    AreaLevel >= 45
+                Show "Low"
+                    AreaLevel < 45
+        Unset "Low"
+            DropLevel < 40
+
+            Fork "AreaLevel"
+                Hide "High"
+                    AreaLevel >= 64
+                Hide "Middle"
+                    AreaLevel >= 45
+                Show "Low"
+                    AreaLevel < 45
 
 ################################################################################
 # Jewel                                                                        #
